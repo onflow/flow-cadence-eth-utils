@@ -1,0 +1,46 @@
+{
+	"contracts": {
+		"FungibleToken": {
+			"source": "cadence/contracts/FungibleToken.cdc",
+			"aliases": {
+				"emulator": "ee82856bf20e2aa6",
+				"mainnet": "f233dcee88fe0abe",
+				"testnet": "9a0766d93b6608b7"
+			}
+		},
+		"ETHUtils" : "cadence/contracts/ETHUtils.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"sandboxnet": "access.sandboxnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"default": {
+			"address": "f3fcd2c1a78f5eee",
+			"key": "f66227e93c3ddf22451eb8bab13bcc74202bdbcb188bc6a6c25df8000e99ccce"
+		},
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "aca7bcca2c7925e5aae15cc5d05eafe6f9cee203568b1dbec8bb3352b0445743"
+		},
+		"testnet-account": {
+			"address": "00c9bb1788540976",
+			"key": {
+				"type": "file",
+				"location": "testnet-account.pkey"
+			}
+		}
+	},
+	"deployments": {
+		"emulator": {
+			"default": []
+		},
+		"testnet": {
+			"testnet-account": [
+				"ETHUtils"
+			]
+		}
+	}
+}
