@@ -48,7 +48,7 @@ try {
     const pubKeyWithPrefix = ethers.utils.recoverPublicKey(messageHash, ethSig);
 
     // Remove the prefix of the recovered public key
-    const pubKey = recoveredPubKeyWithPrefix.slice(4);
+    const pubKey = pubKeyWithPrefix.slice(4);
 
     // The pubKey, toSign, and signature can now be used to interact with Cadence
 

@@ -22,7 +22,8 @@ pub contract ETHUtils {
         return isValid
     }
 
-    pub fun getETHAddressFromPublicKey(decodedHexPublicKey: [UInt8]) : String {
+    pub fun getETHAddressFromPublicKey(hexPublicKey: String) : String {
+        let decodedHexPublicKey = hexPublicKey.decodeHex()
         let digest = HashAlgorithm.KECCAK_256.hash(decodedHexPublicKey)
         let hexDigest = String.encodeHex(digest)
         let ethAddress = "0x".concat(hexDigest.slice(from: hexDigest.length-40, upTo: hexDigest.length))
