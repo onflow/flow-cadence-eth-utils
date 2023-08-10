@@ -1,4 +1,4 @@
-# Ethereum Signature Verification for Cadence
+# Ethereum Signature Verification with Cadence
 
 This guide will show you how to generate a public key, a signature, and a message that can be passed into a Cadence smart contract. This can be achieved using Ethereum JavaScript libraries such as ethers.js or any other Web3 API.
 
